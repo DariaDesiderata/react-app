@@ -9,7 +9,6 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  width: max-content;
   margin: 10px auto;
 }
 article {
@@ -57,10 +56,11 @@ article {
 .article__dropdown.open {
   height: max-content;
   padding: 20px 0 60px;
-  max-width: 98%;
+  max-width: 99%;
   text-align: left;
   animation: dropdown .3s;
 } 
+
 .article__dropdown.open > .article__post {
   opacity: 1;
 }
@@ -81,12 +81,16 @@ article {
 }
 .article__wrapper {
   display: flex;
+  margin: auto;
 }
 .roll-up {
   animation: roll-up .3s;
 }
 
-
+.dropdown {
+  width: 86%;
+  margin: auto;
+}
 @keyframes dropdown {
   from {
     height: 0;
@@ -100,7 +104,7 @@ article {
     height: 500px;
   }
   to {
-    height: 0;
+    height: 17px;
   }
 }
 @keyframes fade-in {
