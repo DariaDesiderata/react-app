@@ -1,4 +1,4 @@
-This project was created with Create-react-app with no use of extra libraries. All functions and utilities were written by me and represent my typical code style. If allowed additional time I would add some unit tests to ensure code acuracy.
+This project was created with Create-react-app with no extra libraries. All functions and utilities were written by me and represent my typical code style. If allowed additional time I would add some unit tests to ensure code acuracy.
 
 ## Available Scripts
 
