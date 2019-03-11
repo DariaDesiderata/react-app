@@ -1,14 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 400');
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: hsla(208, 41%, 27%, 0.8);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 10px auto;
+}
+article {
+  display: flex;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 50px 20px;
+}
+.article__userInfo, .article__dropdown {
+  margin: 10px;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 3px 3px 3px #dbdbdb;
+  font-family: 'Open Sans', sans-serif;
+}
+.article__userInfo {
+  width: 350px;
+}
+.article__userInfo.selected {
+  border: 1px solid hsla(208, 41%, 27%, 0.8);
+}
+.article__text {
+  display: block;
+  padding: 0 20px;
+  margin: auto;
+}
+.article__text > p {
+  margin-bottom: 0;
+}
+.italic {
+  padding: 0 0 20px 0;
+  font-style: italic;
+}
+.bold {
+  padding: 0;
+  font-weight: 600;
+}
+.article__dropdown {
+  padding: 20px;
+  text-align: center;
+} 
+.article__dropdown > .article__post {
+  opacity: 0;
+}
+.article__dropdown.open {
+  height: max-content;
+  padding: 20px 0 60px;
+  max-width: 98%;
+  text-align: left;
+  animation: dropdown .3s;
+} 
+.article__dropdown.open > .article__post {
+  opacity: 1;
+}
+.article__post {
+  display: block;
+  padding: 20px;
+  color: hsla(208, 41%, 27%, 0.8);
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 20px;
+  animation: fade-in .3s ease-in-out;
+}
+.article__post-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+.article__wrapper {
+  display: flex;
+}
+.roll-up {
+  animation: roll-up .3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+@keyframes dropdown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 500px;
+  }
+}
+@keyframes roll-up {
+  from {
+    height: 500px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
